@@ -1,0 +1,27 @@
+
+{% extends "mainPage/base.html" %}
+
+{% block title %} 'AL :: Contacts' {% endblock title %}
+
+{% block content %}
+<h1>Contact Me</h1>
+<form method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <!--<label for="email">Your e-mail: </label>
+    <input id="email" type="email" name="email" value="{{ from_email }}">
+
+    <label for="subject">Subject: </label>
+    <input id="subject" type="text" name="subject" value="{{ subject }}">
+
+    <label for="message">Message: </label>
+    <input id="message" type="text" name="message" value="{{ message }}">-->
+
+
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+{% endblock content %}
